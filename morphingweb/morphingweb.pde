@@ -232,7 +232,7 @@ class Cloud{
        }
        
        
-       stroke(200,200,255,30);
+       stroke(200,200,255,20);
        noFill();
        for(int i=0; i<links.size(); i++){
             
