@@ -32,7 +32,7 @@ void draw() {
 
    stroke(0,0,0,90);
    noFill();
-   for(int i=0; i<50; i++){
+   for(int i=0; i<30; i++){
       float delta = random(50,300);
       curve(
       mouseX + random(-delta, delta), mouseY + random(-delta, delta),
