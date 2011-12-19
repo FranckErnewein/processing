@@ -268,6 +268,10 @@ void setup(){
 void draw(){
   
   background(0);
+  fill(200,200,255);
+  textSize(12);
+  textMode(SCREEN);
+  text("drag to rotate", 2, 12);
   /*
   rx+=0.001;
   ry+=0.01;
