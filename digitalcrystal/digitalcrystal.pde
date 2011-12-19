@@ -277,6 +277,24 @@ void draw(){
   
   
   //createGradient(0,0,height/2, color(0,0,0) ,color(0,0,100) );
+  
+  
+  if(!mousePressed){
+      
+      if(abs(deltaRX) > 0.01 ){
+         deltaRX = deltaRX*0.9;
+      }else{
+         deltaRX = 0 ;
+      }
+      if(abs(deltaRY) > 0.01){
+         deltaRY = deltaRY*0.9;
+      }else{
+         deltaRY = 0 ;
+      }
+  }
+
+  rx+=deltaRY;
+  ry+=deltaRX;
 
   rotateZ(rz);
   rotateX(rx);
@@ -289,7 +307,6 @@ void draw(){
   cloud.display();
 };
 
-
 float oldMouseX;
 float oldMouseY;
 
@@ -298,12 +315,10 @@ void mousePressed(){
   oldMouseY = mouseY;
 }
 
+float deltaRX;
+float deltaRY;
+
 void mouseDragged(){
-   ry += (mouseX - oldMouseX) / width / (PI*2);
-   rx += (mouseY - oldMouseY) / height / (PI*2);
-   
+   deltaRX = (mouseX - oldMouseX) / width / (PI*2);
+   deltaRY = (mouseY - oldMouseY) / height / (PI*2);
 }
-
-
-
-
