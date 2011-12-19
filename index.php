@@ -46,11 +46,12 @@
 			if(isset($_GET['pde'])){
 				echo '<h1>'.$_GET['pde'].'</h1>';
 				echo '<canvas data-processing-sources="'.$_GET['pde'].'/'.$_GET['pde'].'.pde"></canvas>';
+				?><p class="src">source at <a href="https://github.com/FranckErnewein/processing">https://github.com/FranckErnewein/processing</a></p><?php
 			}else{
-			
+				?><h1>Processing lab</h1><?php
 			}
 		?>
-		<p class="src">source at <a href="https://github.com/FranckErnewein/processing">https://github.com/FranckErnewein/processing</a></p>
+		
 	</div>
 	
 	
