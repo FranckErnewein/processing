@@ -4,19 +4,25 @@
 	<title>Processing Lab</title>
 	<script src="processing-1.3.6.min.js"></script>
 	<style>
-		canvas{float:left;border:1px solid #333;outline:0 none;}
+		
 		body{font-family:monospace;color:#333;}
-		.links{float:left;padding:5px;}
+		h1{margin:0;padding:5px 0;height:40px;}
+		.links{float:left;padding:50px 10px 0 5px;margin:0;}
 		.links a,
 		.links span{color:#666;display:inline-block;padding:2px;}
 		.links a:hover{background:yellow;color:#333;}
 		.links span.current{color:#fff !important;}
 		.links a:visited{color:#333;}
+		
+		.sketch{float:left;}
+		.sketch canvas{border:1px solid #333;outline:0 none;}
+		
+		.src{clear:both;text-align:right;}
+		.src a{color:#666;}
 	</style>
 </head>
 <body style="background:#000">
 	<p class="links">
-	<br /><br />
 	<?php 
 		$dir_nom = './';
 		$dir = opendir($dir_nom);
@@ -35,15 +41,19 @@
 	
 	?>
 	</p>
+	<div class="sketch">
+		<?php 
+			if(isset($_GET['pde'])){
+				echo '<h1>'.$_GET['pde'].'</h1>';
+				echo '<canvas data-processing-sources="'.$_GET['pde'].'/'.$_GET['pde'].'.pde"></canvas>';
+			}else{
+			
+			}
+		?>
+		<p class="src">source at <a href="https://github.com/FranckErnewein/processing">https://github.com/FranckErnewein/processing</a></p>
+	</div>
 	
-	<?php 
-		if(isset($_GET['pde'])){
-			echo '<h1>'.$_GET['pde'].'</h1>';
-			echo '<canvas data-processing-sources="'.$_GET['pde'].'/'.$_GET['pde'].'.pde"></canvas>';
-		}else{
-		
-		}
-	?>
+	
 	
 	
 </body>
