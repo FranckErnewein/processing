@@ -7,10 +7,11 @@
 		
 		body{font-family:monospace;color:#333;}
 		h1{margin:0;padding:5px 0;height:40px;}
+		a:hover{background:yellow;color:#333;}
 		.links{float:left;padding:50px 10px 0 5px;margin:0;}
 		.links a,
 		.links span{color:#666;display:inline-block;padding:2px;}
-		.links a:hover{background:yellow;color:#333;}
+		
 		.links span.current{color:#fff !important;}
 		.links a:visited{color:#333;}
 		
@@ -44,9 +45,15 @@
 	<div class="sketch">
 		<?php 
 			if(isset($_GET['pde'])){
-				echo '<h1>'.$_GET['pde'].'</h1>';
-				echo '<canvas data-processing-sources="'.$_GET['pde'].'/'.$_GET['pde'].'.pde"></canvas>';
-				?><p class="src">source at <a href="https://github.com/FranckErnewein/processing">https://github.com/FranckErnewein/processing</a></p><?php
+				$pde = $_GET['pde'].'/'.$_GET['pde'].'.pde';
+				echo '
+					<h1>'.$_GET['pde'].'</h1>
+					<canvas data-processing-sources="'.$pde.'"></canvas>
+					<p class="src">
+						source : <a href="'.$pde.'">'.$pde.'</a><br />
+						github : <a href="https://github.com/FranckErnewein/processing">https://github.com/FranckErnewein/processing</a>
+					</p>
+				';
 			}else{
 				?><h1>Processing lab</h1><?php
 			}
