@@ -62,7 +62,7 @@ class Particule {
     }
     strokeWeight(2);
     for (int i=0;i<mx; i++) {
-      color c = color(red(col-i*5), green(col-i*5), blue(col-i*5), mx );
+      color c = color(red(col-i*5), green(col-i*5), blue(col-i*5), 6 );
       fill( c );
       
       stroke(color(red(col+100), green(col+100), blue(col+100)));
