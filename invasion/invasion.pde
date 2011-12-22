@@ -96,7 +96,6 @@ void draw(){
              }else{
                initBall(mouseX, mouseY);
              }
-             
          }
     }
   }
