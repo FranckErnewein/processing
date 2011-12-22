@@ -72,6 +72,7 @@ void draw(){
   if(clear){
 
       fill(0,0,0,30);
+      noStroke();
       rect(0,0,width,height);
       if(nbDraw == 50){
          clear = false;
@@ -98,9 +99,6 @@ void draw(){
              
          }
     }
-    
-    fill(0,0,0,2);
-    //rect(0,0,width,height);
   }
 }
 
